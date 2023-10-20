@@ -6,43 +6,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- O objetivo aqui é usar o tailwind e dps pedir pro copilot transformar tudo em classe css -->
+    <script>
+      tailwind.config = {
+        corePlugins: {
+          preflight: false, //desabilitar, pra depois quando tirar o tailwind não ficar com o css todo zoado
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="./styles/base.css" />
+    <link rel="stylesheet" href="./styles/navigation.css" />
+    <link rel="stylesheet" href="./styles/pokedex.css" />
   </head>
   <body>
     <header>
-      <nav>
-        <div>Pokedex LMS</div>
+      <nav class="navbar">
+        <a href="#" class="navbarLogo">
+          <img src="./logo.svg" width="30" alt="Logo" />
+          <h1 class="navbarTitle">PokedexLMS</h1>
+        </a>
 
-        <div>
-          <span> Inicio </span>
-          <span> Qual seu pokémon favorito? </span>
-          <span> Equipe </span>
+        <div class="navbarLinks">
+          <a href="#" class="navbarLink">Qual seu pokémon favorito?</a>
+          <a href="#" class="navbarLink">Equipe</a>
         </div>
       </nav>
     </header>
-    <!-- <h1>Pokedex</h1>
-    <div class="pokemon">
-      <img
-        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
-        alt="Bulbasaur"
-      />
-      <h2>Bulbasaur</h2>
-      <p>Grass / Poison</p>
-    </div>
-    <div class="pokemon">
-      <img
-        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"
-        alt="Charmander"
-      />
-      <h2>Charmander</h2>
-      <p>Fire</p>
-    </div>
-    <div class="pokemon">
-      <img
-        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png"
-        alt="Squirtle"
-      />
-      <h2>Squirtle</h2>
-      <p>Water</p>
-    </div> -->
+    <section class="pokemon">
+      <div class="pokemonCard">
+        <img
+          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
+          alt="pokemon"
+          class="pokemonImage"
+        />
+
+        <h2 class="pokemonName">
+          Bulbasaur
+          <small class="pokemonNumber">#1</small>
+        </h2>
+
+        <p class="pokemonType">grass</p>
+      </div>
+    </section>
   </body>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </html>
