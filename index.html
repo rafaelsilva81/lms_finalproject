@@ -16,6 +16,7 @@
     </script>
     <link rel="stylesheet" href="./styles/base.css" />
     <link rel="stylesheet" href="./styles/navigation.css" />
+    <link rel="stylesheet" href="./styles/animations.css" />
     <link rel="stylesheet" href="./styles/pokedex.css" />
   </head>
   <body>
@@ -27,13 +28,13 @@
         </a>
 
         <div class="navbarLinks">
-          <a href="#" class="navbarLink">Qual seu pokémon favorito?</a>
           <a href="#" class="navbarLink">Equipe</a>
+          <a href="#" class="navbarLink"><b>CRIE O SEU POKÉMON!</b></a>
         </div>
       </nav>
     </header>
-    <section class="pokemon">
-      <div class="pokemonCard">
+    <section class="pokemon" id="pokemon-container">
+      <!-- <div class="pokemonCard">
         <img
           src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
           alt="pokemon"
@@ -46,8 +47,22 @@
         </h2>
 
         <p class="pokemonType">grass</p>
-      </div>
+      </div> -->
     </section>
+
+    <footer class="pagination">
+      <div class="paginationInfo">
+        <span> PokedexLMS </span>
+        <span>
+          Feito utilizando a <a href="https://pokeapi.co/">PokeAPI</a>
+        </span>
+      </div>
+
+      <div class="paginationActions">
+        <button id="previous">Anterior</button>
+        <button id="next">Próximo</button>
+      </div>
+    </footer>
   </body>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="./scripts/index.js"></script>
