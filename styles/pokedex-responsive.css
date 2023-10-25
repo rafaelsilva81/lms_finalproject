@@ -1,0 +1,65 @@
+@media only screen and (max-width: 768px) {
+  .pokemon {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .pokemonCard {
+    width: 150px;
+  }
+
+  .pokemonName {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+
+  .pokemonNumber {
+    font-size: 0.5rem;
+  }
+
+  .pokemonType {
+    font-size: 0.75rem;
+  }
+
+  .pagination {
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .paginationActions > button {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .pokemonCard {
+    width: 100%;
+  }
+
+  .pokemonName {
+    font-size: 0.75rem;
+    line-height: 0.75rem;
+  }
+
+  .pokemonNumber {
+    font-size: 0.5rem;
+    padding: 0.1rem 0.1rem;
+  }
+
+  .pokemonType {
+    font-size: 0.5rem;
+  }
+
+  .pagination {
+    padding: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .paginationActions > button {
+    font-size: 0.5rem;
+    padding: 0.25rem 0.5rem;
+  }
+}

@@ -42,3 +42,44 @@
 .navbarLink:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+  }
+
+  .navbarLogo {
+    margin-bottom: 1rem;
+  }
+
+  .navbarTitle {
+    font-size: 1.5rem;
+    margin-left: 0;
+  }
+
+  .navbarLinks {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .navbarLink {
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .navbar {
+    padding: 0.5rem;
+  }
+
+  .navbarTitle {
+    font-size: 1.25rem;
+  }
+
+  .navbarLink {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
