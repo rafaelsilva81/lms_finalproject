@@ -83,6 +83,12 @@
   color: white;
 }
 
+.paginationInfo-centered {
+  width: 100%;
+
+  align-items: center;
+}
+
 .paginationInfo > span {
   font-size: 1rem;
   font-weight: bold;

@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="./styles/animations.css" />
     <link rel="stylesheet" href="./styles/pokedex.css" />
     <link rel="stylesheet" href="./styles/pokedex-responsive.css" />
+    <link rel="stylesheet" href="./styles/create_pokemon.css" />
 
     <link rel="icon" href="public/logoPage.png" type="image/png" />
   </head>
@@ -32,43 +33,63 @@
 
         <div class="navbarLinks">
           <a href="#" class="navbarLink">Equipe</a>
-          <a href="./create_pokemon.html" class="navbarLink"
-            ><b>CRIE O SEU POKÉMON!</b></a
-          >
+          <a href="./index.html" class="navbarLink"><b>Pokedex</b></a>
         </div>
       </nav>
     </header>
-    <section class="pokemon" id="pokemon-container">
-      <!-- <div class="pokemonCard">
-        <img
-          src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"
-          alt="pokemon"
-          class="pokemonImage"
-        />
 
-        <h2 class="pokemonName">
-          Bulbasaur
-          <small class="pokemonNumber">#1</small>
-        </h2>
+    <section class="container-form">
+      <div class="form_pokemon" id="form_pokemon">
+        <h1>Crie um novo Pokémon</h1>
 
-        <p class="pokemonType">grass</p>
-      </div> -->
+        <form id="pokemon-form">
+          <div class="div-input">
+            <label for="name">Nome do Pokémon:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="div-input">
+            <label for="type">Tipo do Pokémon:</label>
+
+            <div class="button-container" id="buttonContainer"></div>
+          </div>
+
+          <div class="div-input">
+            <label for="image">Foto do Pokémon:</label>
+            <input
+              type="file"
+              id="image"
+              name="image"
+              accept="image/*"
+              required
+            />
+          </div>
+
+          <div class="div-input">
+            <label for="pokedex-number">Número na Pokédex:</label>
+            <input
+              type="number"
+              id="pokedex-number"
+              name="pokedex-number"
+              value="-1"
+              readonly
+            />
+          </div>
+
+          <button type="submit">Criar Pokémon</button>
+        </form>
+      </div>
     </section>
 
     <footer class="pagination">
-      <div class="paginationInfo">
+      <div class="paginationInfo paginationInfo-centered">
         <span> PokedexLMS </span>
         <span>
           Feito utilizando a <a href="https://pokeapi.co/">PokeAPI</a>
         </span>
       </div>
-
-      <div class="paginationActions">
-        <button id="previous">Anterior</button>
-        <button id="next">Próximo</button>
-      </div>
     </footer>
   </body>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="./scripts/index.js"></script>
+  <script src="./scripts/create_pokemon.js"></script>
 </html>
