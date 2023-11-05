@@ -1,0 +1,64 @@
+@import url("animations.css");
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.details-container {
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.pokemon-info {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.pokemon-info h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.pokemon-info p {
+  font-size: 15px;
+}
+
+.pokemon-info .title {
+  font-size: 30px;
+  animation: move 4s linear infinite;
+  display: block;
+}
+
+h1 {
+  font-size: 30px;
+  text-align: center;
+}
+
+.double-article {
+  display: flex;
+  gap: 30px;
+}
+
+.trainer-articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 10px;
+}
+
+.img-information-page {
+  width: 500px;
+  height: 300px;
+  border-radius: 25px;
+}
+
+@media screen {
+}
