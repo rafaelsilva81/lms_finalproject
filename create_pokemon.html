@@ -5,15 +5,6 @@
     <!-- <link rel="stylesheet" href="styles.css" /> -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- O objetivo aqui é usar o tailwind e dps pedir pro copilot transformar tudo em classe css -->
-    <script>
-      tailwind.config = {
-        corePlugins: {
-          preflight: false, //desabilitar, pra depois quando tirar o tailwind não ficar com o css todo zoado
-        },
-      };
-    </script>
     <link rel="stylesheet" href="./styles/base.css" />
     <link rel="stylesheet" href="./styles/navigation.css" />
     <link rel="stylesheet" href="./styles/animations.css" />
@@ -22,74 +13,53 @@
     <link rel="stylesheet" href="./styles/create_pokemon.css" />
 
     <link rel="icon" href="public/logoPage.png" type="image/png" />
+    <script src="./scripts/layout_loader.js"></script>
   </head>
   <body>
-    <header>
-      <nav class="navbar">
-        <a href="#" class="navbarLogo">
-          <img src="./logo.svg" width="30" alt="Logo" />
-          <h1 class="navbarTitle">PokedexLMS</h1>
-        </a>
+    <main>
+      <section class="container-form">
+        <div class="form_pokemon" id="form_pokemon">
+          <h1>Crie um novo Pokémon</h1>
 
-        <div class="navbarLinks">
-          <a href="#" class="navbarLink">Equipe</a>
-          <a href="./index.html" class="navbarLink"><b>Pokedex</b></a>
-          <a href="./information.html" class="navbarLink"><b>Informações</b></a>
+          <form id="pokemon-form">
+            <div class="div-input">
+              <label for="name">Nome do Pokémon:</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+
+            <div class="div-input">
+              <label for="type">Tipo do Pokémon:</label>
+
+              <div class="button-container" id="buttonContainer"></div>
+            </div>
+
+            <div class="div-input">
+              <label for="image">Foto do Pokémon:</label>
+              <input
+                type="file"
+                id="image"
+                name="image"
+                accept="image/*"
+                required
+              />
+            </div>
+
+            <div class="div-input">
+              <label for="pokedex-number">Número na Pokédex:</label>
+              <input
+                type="number"
+                id="pokedex-number"
+                name="pokedex-number"
+                value="-1"
+                readonly
+              />
+            </div>
+
+            <button type="submit">Criar Pokémon</button>
+          </form>
         </div>
-      </nav>
-    </header>
-
-    <section class="container-form">
-      <div class="form_pokemon" id="form_pokemon">
-        <h1>Crie um novo Pokémon</h1>
-
-        <form id="pokemon-form">
-          <div class="div-input">
-            <label for="name">Nome do Pokémon:</label>
-            <input type="text" id="name" name="name" required />
-          </div>
-
-          <div class="div-input">
-            <label for="type">Tipo do Pokémon:</label>
-
-            <div class="button-container" id="buttonContainer"></div>
-          </div>
-
-          <div class="div-input">
-            <label for="image">Foto do Pokémon:</label>
-            <input
-              type="file"
-              id="image"
-              name="image"
-              accept="image/*"
-              required
-            />
-          </div>
-
-          <div class="div-input">
-            <label for="pokedex-number">Número na Pokédex:</label>
-            <input
-              type="number"
-              id="pokedex-number"
-              name="pokedex-number"
-              value="-1"
-              readonly
-            />
-          </div>
-
-          <button type="submit">Criar Pokémon</button>
-        </form>
-      </div>
-    </section>
-
-    <footer class="pagination">
-      <div class="paginationInfo paginationInfo-centered">
-        <span> PokedexLMS </span>
-        <span>
-          Feito utilizando a <a href="https://pokeapi.co/">PokeAPI</a>
-        </span>
-      </div>
-    </footer>
+      </section>
+    </main>
   </body>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="./scripts/create_pokemon.js"></script>

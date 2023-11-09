@@ -16,11 +16,27 @@
   </head>
   <body>
     <main>
-      <section class="pokemon" id="pokemon-container"></section>
-
-      <div class="pagination">
-        <button id="previous">Página Anterior</button>
-        <button id="next">Próxima Página</button>
+      <div id="carousel" class="carousel">
+        <div class="carousel-items">
+          <div class="carousel-item active">
+            <img
+              src="
+              https://  
+            "
+              alt="Image 1"
+            />
+          </div>
+          <div class="carousel-item">
+            <img src="image2.jpg" alt="Image 2" />
+          </div>
+          <div class="carousel-item">
+            <img src="image3.jpg" alt="Image 3" />
+          </div>
+        </div>
+        <button class="carousel-button prev" onclick="moveSlide(-1)">
+          foward
+        </button>
+        <button class="carousel-button next" onclick="moveSlide(1)">bac</button>
       </div>
     </main>
   </body>

@@ -4,6 +4,7 @@
   justify-content: space-evenly;
   padding: 2rem;
   gap: 2rem;
+  padding-bottom: 0;
 }
 
 .pokemonCard {
@@ -65,36 +66,31 @@
   font-weight: bold;
 }
 
-.pagination {
+.footer {
   display: flex;
-  justify-content: space-between;
   gap: 1rem;
   align-items: center;
+  justify-content: center;
   background-color: #dc0a2d;
   padding: 0.8rem;
   padding-left: 3rem;
   padding-right: 3rem;
 }
 
-.paginationInfo {
+.footerInfo {
   display: flex;
-  flex-direction: column;
   gap: 0.5rem;
+  flex-direction: column;
+  align-items: center;
   color: white;
 }
 
-.paginationInfo-centered {
-  width: 100%;
-
-  align-items: center;
-}
-
-.paginationInfo > span {
+.footerInfo > span {
   font-size: 1rem;
   font-weight: bold;
 }
 
-.paginationInfo > span > a:hover {
+.footerInfo > span > a:hover {
   color: #dc0a2d;
   text-decoration: underline;
   background-color: white;
@@ -104,15 +100,17 @@
   duration: 0.2s;
 }
 
-.paginationActions {
+.pagination {
   display: flex;
   gap: 1rem;
   align-items: center;
+  justify-content: center;
+  padding: 2rem;
 }
 
-.paginationActions > button {
-  background-color: white;
-  color: #dc0a2d;
+.pagination > button {
+  background-color: #dc0a2d;
+  color: white;
   border: none;
   border-radius: 0.25rem;
   padding: 0.5rem 1rem;
@@ -121,13 +119,13 @@
   cursor: pointer;
 }
 
-.paginationActions > button:hover {
+.pagination > button:hover {
   opacity: 0.8;
   transition: 0.2s ease-in-out;
   duration: 0.2s;
 }
 
-.paginationActions > button:active {
+.pagination > button:active {
   opacity: 0.5;
   transition: 0.2s ease-in-out;
   duration: 0.2s;
