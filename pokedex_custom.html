@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <title>Pokedex</title>
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/base.css" />
+    <link rel="stylesheet" href="./styles/navigation.css" />
+    <link rel="stylesheet" href="./styles/animations.css" />
+    <link rel="stylesheet" href="./styles/pokedex_custom.css" />
+    <link rel="stylesheet" href="./styles/pokedex_custom-responsive.css" />
+
+    <link rel="icon" href="public/logoPage.png" type="image/png" />
+    <script src="./scripts/layout_loader.js"></script>
+  </head>
+  <body>
+    <main>
+      <section class="pokemon" id="pokemon-container"></section>
+
+      <div class="pagination">
+        <button id="previous">Página Anterior</button>
+        <button id="next">Próxima Página</button>
+      </div>
+    </main>
+  </body>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./scripts/pokedex_custom.js"></script>
+</html>

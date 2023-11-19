@@ -1,0 +1,136 @@
+main {
+  height: 78vh;
+}
+
+.pokemon {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 2rem;
+  gap: 2rem;
+  padding-bottom: 0;
+}
+
+.pokemonCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 200px;
+  background-color: #dc0a2d;
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5);
+  border-radius: 0.5rem;
+  text-align: center;
+  color: white;
+
+  animation: fadeIn 0.5s ease-in-out;
+  animation-fill-mode: both;
+  duration: 0.5s;
+}
+
+.pokemonImage {
+  height: 80px;
+  width: 80px;
+  padding: 0.25rem;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.pokemonName {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  justify-content: center;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0.25rem;
+}
+
+.pokemonNumber {
+  font-size: 0.75rem;
+  background-color: white;
+  color: black;
+  margin: 0;
+  padding: 0.15rem 0.15rem;
+  border-radius: 0.25rem;
+}
+
+.pokemonType {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.footer {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  background-color: #dc0a2d;
+  padding: 0.8rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.footerInfo {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.footerInfo > span {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.footerInfo > span > a:hover {
+  color: #dc0a2d;
+  text-decoration: underline;
+  background-color: white;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+  transition: 0.2s ease-in-out;
+  duration: 0.2s;
+}
+
+.pagination {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.pagination > button {
+  background-color: #dc0a2d;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.pagination > button:hover {
+  opacity: 0.8;
+  transition: 0.2s ease-in-out;
+  duration: 0.2s;
+}
+
+.pagination > button:active {
+  opacity: 0.5;
+  transition: 0.2s ease-in-out;
+  duration: 0.2s;
+}

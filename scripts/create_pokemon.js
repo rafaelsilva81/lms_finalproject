@@ -1,3 +1,16 @@
+const listCustomPokemon = [];
+
+function getLocalStorage() {
+  return JSON.parse(localStorage.getItem("@lms:Pokedex")) || [];
+}
+
+function addPokemonInLocalStorage(newItem) {
+  const currentList = getLocalStorage();
+  currentList.push(newItem);
+
+  localStorage.setItem("@lms:Pokedex", [JSON.stringify(currentList)]);
+}
+
 function getSelectedTypes() {
   const selectedButtons = document.querySelectorAll(".selected");
   const selectedTypes = Array.from(selectedButtons).map(
@@ -10,18 +23,20 @@ function getSelectedTypes() {
 document
   .getElementById("pokemon-form")
   .addEventListener("submit", function (e) {
-    e.preventDefault(); // Impedir o envio padrão do formulário
-
     // Recuperar os dados do formulário
     const name = document.getElementById("name").value;
     const types = getSelectedTypes();
     const image = document.getElementById("image").value;
-    const pokedexNumber = document.getElementById("pokedex-number").value;
 
-    console.log("Nome:", name);
-    console.log("Tipo:", types);
-    console.log("Foto:", image);
-    console.log("Número na Pokédex:", pokedexNumber);
+    const newPokemon = {
+      id: -1,
+      name: name,
+      types: types,
+      image: image,
+    };
+
+    addPokemonInLocalStorage(newPokemon);
+    alert("Pokemon criado");
   });
 
 function loadValuesInputTypePokemon() {
@@ -49,6 +64,11 @@ function loadValuesInputTypePokemon() {
 
   // Função para alternar a seleção de botões
   function toggleSelection(button) {
+    const quantityTypes = getSelectedTypes().length;
+    if (quantityTypes > 2) {
+      alert("Máximo de tipo do pokemon atingido");
+      return;
+    }
     button.classList.toggle("selected");
   }
 

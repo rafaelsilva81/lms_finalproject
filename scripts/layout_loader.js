@@ -7,6 +7,7 @@ const headerHTML = `<header>
 
   <div class="navbarLinks">
     <a href="index.html" class="navbarLink">Pokedex</a>
+    <a href="pokedex_custom.html" class="navbarLink">Pokedex - Custom</a>
     <a href="equipe.html" class="navbarLink">Equipe</a>
     <a href="create_pokemon.html" class="navbarLink"
       ><b>CRIE O SEU POKÉMON!</b></a
